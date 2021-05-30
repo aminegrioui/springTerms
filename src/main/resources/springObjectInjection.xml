@@ -6,7 +6,7 @@
         xsi:schemaLocation="http://www.springframework.org/schema/beans
                http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
 
-    <bean id="traingle" class="com.javaBrain.springObjectInjection.Traingle">
+    <bean id="traingle" class="com.javaBrain.springObjectInjection.Traingle" scope="prototype">
         <property name="pointA" ref="point1"/>
         <property name="pointB" >
             <bean class="com.javaBrain.springObjectInjection.Point">
@@ -21,11 +21,12 @@
             </bean>
         </property>
     </bean>
-
     <bean id="point1" class="com.javaBrain.springObjectInjection.Point">
          <property name="x" value="0"></property>
         <property name="y" value="0"></property>
     </bean>
-
+   <bean id="circle" class="com.javaBrain.springObjectInjection.Circle">
+       <property name="center" ref="point1"/>
+   </bean>
 
 </beans>

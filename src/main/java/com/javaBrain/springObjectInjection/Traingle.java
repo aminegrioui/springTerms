@@ -1,6 +1,6 @@
 package com.javaBrain.springObjectInjection;
 
-public class Traingle {
+public class Traingle implements  Shape{
 
     private Point pointA;
     private Point pointB;
@@ -31,6 +31,7 @@ public class Traingle {
     }
 
     public void draw(){
+        System.out.println("Drawing traingle : ");
         System.out.println("PointA ("+ this.pointA.getX() + ", "+this.getPointA().getY()+ " )");
         System.out.println("PointB ("+ this.pointB.getX() + ", "+this.getPointB().getY()+ " )");
         System.out.println("PointC ("+ this.pointC.getX() + ", "+this.getPointC().getY()+ " )");

@@ -8,8 +8,16 @@ public class Test {
 
         ApplicationContext applicationContext=new ClassPathXmlApplicationContext("springObjectInjection.xml");
 
+
+
+        // without using Coding to interfece
         Traingle traingle=(Traingle) applicationContext.getBean("traingle");
         traingle.draw();
+        Circle traingle2=(Circle) applicationContext.getBean("circle");
+        traingle2.draw();
+        System.out.println("Using Interface");
+        Shape shape=(Traingle) applicationContext.getBean("traingle");
+        shape.draw();
 
     }
 }
