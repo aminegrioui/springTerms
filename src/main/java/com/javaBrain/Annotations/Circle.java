@@ -13,6 +13,7 @@ public class Circle implements Shape {
     }
 
     @Autowired
+    @Qualifier("pointA")
     public void setCenter(Point center) {
         this.center = center;
     }
